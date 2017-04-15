@@ -36,8 +36,8 @@ class YelpApiV3 {
     return this.get('businesses/search/phone', params);
   }
 
-  transactionSearch(params, transactionType) {
-    return this.get(`transactions/${transactionType}/search`, params);
+  transactionSearch(params) {
+    return (transactionType) => this.get(`transactions/${transactionType}/search`, params)
   }
 
   business(id) {
