@@ -1,6 +1,6 @@
 {
   "name": "v3-yelp-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node Wrapper for Yelp Api V3",
   "main": "index.js",
   "scripts": {
