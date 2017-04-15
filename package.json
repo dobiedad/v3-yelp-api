@@ -1,0 +1,27 @@
+{
+  "name": "v3-yelp-api",
+  "version": "1.0.0",
+  "description": "Node Wrapper for Yelp Api V3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dobiedad/YelpApiV3.git"
+  },
+  "keywords": [
+    "yelp-api",
+    "v3",
+    "react-native"
+  ],
+  "author": "dobiedad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dobiedad/YelpApiV3/issues"
+  },
+  "homepage": "https://github.com/dobiedad/YelpApiV3#readme",
+  "dependencies": {
+    "httpism": "^2.7.0"
+  }
+}
