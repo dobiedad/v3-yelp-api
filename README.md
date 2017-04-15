@@ -1,5 +1,8 @@
-# v3 Yelp Api Wrapper
-A simple npm wrapper for Yelp v3 Api
+# v3 Yelp Api
+A simple npm wrapper for Yelp v3 Api which is compatible with [React Native](https://github.com/facebook/react-native)
+
+## Dependencies
+[httpism](https://github.com/featurist/httpism)
 
 ## Install
 
@@ -10,12 +13,12 @@ A simple npm wrapper for Yelp v3 Api
 ```JavaScript
 import YelpApi from 'v3-yelp-api';
 
-let credententials = {
+const credentials = {
     appId:"App Id from Yelp Developer Console",
     app: "App Secret from Yelp Developer Console"
 }
 
-let yelp = New YelpApi(credentials)
+const yelp = New YelpApi(credentials)
 ```
 
 ### Search
@@ -33,9 +36,7 @@ yelp.search(params)
 ```
 ### Phone Search
 ```JavaScript
-let params = {
-    phone: '+442073722882'
-}
+let params = { phone: '+442073722882' }
 
 yelp.phoneSearch(params)
  .then(data => data)
@@ -49,7 +50,7 @@ yelp.business(bestRestaurantEver)
  .then(data => data)
  .catch(err => err)
 
- yelp.reviews(bestRestaurantEver)
+yelp.reviews(bestRestaurantEver)
  .then(data => data)
  .catch(err => err)
 ```
