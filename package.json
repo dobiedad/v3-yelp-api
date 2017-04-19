@@ -1,6 +1,6 @@
 {
   "name": "v3-yelp-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node Wrapper for Yelp Api V3",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/dobiedad/YelpApiV3#readme",
   "dependencies": {
-    "httpism": "^2.7.0"
+    "axios": "^0.16.1",
+    "querystring": "^0.2.0"
   }
 }

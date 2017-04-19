@@ -1,4 +1,5 @@
-import http from 'httpism';
+import http from 'axios';
+import qs from 'querystring'
 
 const baseUrl = 'https://api.yelp.com/v3/';
 const tokenUrl = 'https://api.yelp.com/oauth2/token';
@@ -15,17 +16,15 @@ class YelpApiV3 {
 
   getAccessToken() {
     if(this.accessToken) Promise.resolve(this.accessToken)
-    return http.post(tokenUrl, this.credentials , {form: true})
-      .then((res) => {this.accessToken = res.body.access_token; return this.accessToken})
-      .catch(err => new Error(err.message))
-  }
+    return http.post(tokenUrl, qs.stringify(this.credentials) )
+      .then((res) => { this.accessToken = res.data.access_token;return this.accessToken})
+    }
 
   get(resource,params){
     if(!params) throw new Error('An object must be supplied with the following properties: query, location, price, limit')
     return this.getAccessToken()
-      .then(token => http.get(baseUrl + resource ,{ querystring:params, headers: {'Authorization': 'Bearer ' + token}}))
-      .then(res => res.body)
-      .catch(err => new Error(err.message))
+      .then(token => http({method:'get' ,url:baseUrl + resource, params:params, headers: {'Authorization': 'Bearer ' + token}}))
+      .then(res => res.data)
   }
 
   search(params) {

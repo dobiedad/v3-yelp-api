@@ -2,8 +2,9 @@
 A simple npm wrapper for Yelp v3 Api which is compatible with [React Native](https://github.com/facebook/react-native)
 
 ## Dependencies
-[httpism](https://github.com/featurist/httpism)
+[axios](https://github.com/mzabriskie/axios)
 
+[qs](https://github.com/ljharb/qs)
 ## Install
 
 ### npm
