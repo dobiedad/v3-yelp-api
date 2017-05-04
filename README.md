@@ -16,7 +16,7 @@ import YelpApi from 'v3-yelp-api';
 
 const credentials = {
     appId:"App Id from Yelp Developer Console",
-    app: "App Secret from Yelp Developer Console"
+    appSecret: "App Secret from Yelp Developer Console"
 }
 
 const yelp = New YelpApi(credentials)
